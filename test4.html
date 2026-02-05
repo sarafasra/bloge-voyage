@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViaBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-900 pb-16">
+    <header class="w-full px-4 py-3 flex items-center justify-between">
+        <i class="fa-solid fa-list"></i> <i class="fa-solid fa-magnifying-glass"></i>
+    </header>
+    <main>
+        <section>
+            <h1 class="px-2 font-semibold">Blogger Of The Week</h1>
+            <div class="flex flex-row items-center overflow-y-scroll py-10 space-x-4 px-2 md:flex md:justify-center ">
+                <div class="w-14 h-14 rounded-full bg-gray-200  bg-cover bg-center bg-[url('/tele.jpg')] ">
+                    <p class="text-center text-xs pt-14 md:pt-14 mt-1">Pedri</p>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-gray-200  bg-cover bg-center bg-[url('/télécharger6.jpg')] ">
+                    <p class="text-center text-xs pt-14 md:pt-14 mt-1">Gavi</p>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-gray-200  bg-cover bg-center bg-[url('/télécharger8.jpg')] ">
+                    <p class="text-center text-xs pt-14 md:pt-14 mt-1">Erick</p>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-gray-200  bg-cover bg-center bg-[url('/télécharger9.jpg')] ">
+                    <p class="text-center text-xs pt-14 md:pt-14 mt-1">Hansi-flik</p>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-gray-200  bg-cover bg-center bg-[url('/télécharger12.jpg')]">
+                    <p class="text-center text-xs pt-14 md:pt-14 mt-1">Lucka-modrish</p>
+                </div>
+            </div>
+        </section>
+        <section class="px-2 ">
+            <div class="flex justify-between m-5">
+                <h2 class=" font-semibold">What do you want to read?</h2>
+                <button class="mr-2 bg-lime-600 rounded-xl" id="btnAdd"> Ajouter Card</button>
+            </div>
+            <div class="flex flex-row md:flex md:justify-center my-2 overflow-y-scroll">
+                <div>
+                    <button class="border-2 border-solid w-16 py-1 mx-1 rounded-xl bg-green-600 text-white">All</button>
+                </div>
+                <div> <button class="border-2 border-solid w-16 py-1 mx-1 rounded-xl text-black">Forest</button> </div>
+                <div> <button class="border-2 border-solid w-16 py-1 mx-1 rounded-xl text-black">Beach</button> </div>
+                <div> <button class="border-2 border-solid w-20 py-1 mx-1 rounded-xl text-black">Mountains</button>
+                </div>
+                <div> <button class="border-2 border-solid w-16 py-1 mx-1 rounded-xl text-black">Road</button> </div>
+            </div>
+
+        </section>
+        <section id="posts-container" class="md:flex">
+
+        </section>
+        <div  id="hidden-form" class="hidden">
+            <div  class=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
+            <form id="trip-form" class="bg-white  rounded-2xl shadow-xl p-6 w-80 md:w-96 flex flex-col space-y-4 ">
+                <h2 class="text-xl font-semibold text-center ">Ajouter un Trip</h2>
+
+                <div class="flex flex-col">
+                    <label for="title" class="text-sm font-medium mb-1">Titre</label>
+                    <input type="text" name="title"
+                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        placeholder="Ex: Yellow River">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="author" class="text-sm font-medium mb-1">Auteur</label>
+                    <input type="text" name="author"
+                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        placeholder="Ex: Joan Garcia">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="image" class="text-sm font-medium mb-1">Image URL</label>
+                    <input type="text" name="image"
+                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        placeholder="/assets/4.png">
+                </div>
+
+                <div class="flex flex-col">
+                    <label for="category" class="text-sm font-medium mb-1">CatÃ©gorie</label>
+                    <select name="category"
+                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="all">All</option>
+                        <option value="forest">Forest</option>
+                        <option value="beach">Beach</option>
+                        <option value="mountains">Mountains</option>
+                        <option value="road">Road</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition-colors">Ajouter</button>
+            </form>
+        </div>
+        </div>
+        
+
+
+
+
+    </main>
+    <nav class="fixed bottom-0 w-full flex justify-around bg-white shadow-md py-2 rounded-xl md:hidden">
+        <div class="bg-green-600 rounded-xl w-10 text-center"> <i class="fa-solid fa-house text-xl cursor-pointer"></i>
+        </div> <i class="fa-regular fa-heart text-xl cursor-pointer"></i> <i
+            class="fa-solid fa-location-dot text-xl cursor-pointer"></i>
+        <a href="profile.html"><i class="fa-regular fa-user text-xl cursor-pointer"></i></a>
+    </nav>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
