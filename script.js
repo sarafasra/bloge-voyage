@@ -7,3 +7,7 @@ let trips = [
         category: "River"
     }
 ];
+
+let container = document.getElementById("posts-container");
+let hid = document.getElementById("hidden-form");
+
