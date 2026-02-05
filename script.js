@@ -32,3 +32,23 @@ afficherCards(trips);
 document.getElementById("btnAdd").addEventListener("click", () => {
     hid.classList.remove("hidden");
 });
+
+document.getElementById("trip-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const newTrip = {
+        id: trips.length + 1,
+        title: e.target.title.value,
+        author: e.target.author.value,
+        image: e.target.image.value,
+        category: e.target.category.value
+    };
+
+    trips.push(newTrip);
+    afficherCards(trips);
+    e.target.reset();
+    hid.classList.add("hidden");
+});
+
+
+
