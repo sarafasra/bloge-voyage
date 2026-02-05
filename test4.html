@@ -13,6 +13,7 @@
     <header class="w-full px-4 py-3 flex items-center justify-between">
         <i class="fa-solid fa-list"></i> <i class="fa-solid fa-magnifying-glass"></i>
     </header>
+    
     <main>
         <section>
             <h1 class="px-2 font-semibold">Blogger Of The Week</h1>
@@ -54,50 +55,52 @@
         <section id="posts-container" class="md:flex">
 
         </section>
-        <div  id="hidden-form" class="hidden">
-            <div  class=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
-            <form id="trip-form" class="bg-white  rounded-2xl shadow-xl p-6 w-80 md:w-96 flex flex-col space-y-4 ">
-                <h2 class="text-xl font-semibold text-center ">Ajouter un Trip</h2>
 
-                <div class="flex flex-col">
-                    <label for="title" class="text-sm font-medium mb-1">Titre</label>
-                    <input type="text" name="title"
-                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        placeholder="Ex: Yellow River">
-                </div>
+        <div id="hidden-form" class="hidden">
+            <div class=" fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
+                <form id="trip-form" class="bg-white  rounded-2xl shadow-xl p-6 w-80 md:w-96 flex flex-col space-y-4 ">
+                    <h2 class="text-xl font-semibold text-center ">Ajouter un Trip</h2>
 
-                <div class="flex flex-col">
-                    <label for="author" class="text-sm font-medium mb-1">Auteur</label>
-                    <input type="text" name="author"
-                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        placeholder="Ex: Joan Garcia">
-                </div>
+                    <div class="flex flex-col">
+                        <label for="title" class="text-sm font-medium mb-1">Titre</label>
+                        <input type="text" name="title"
+                            class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            placeholder="Ex: Yellow River">
+                    </div>
 
-                <div class="flex flex-col">
-                    <label for="image" class="text-sm font-medium mb-1">Image URL</label>
-                    <input type="text" name="image"
-                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        placeholder="/assets/4.png">
-                </div>
+                    <div class="flex flex-col">
+                        <label for="author" class="text-sm font-medium mb-1">Auteur</label>
+                        <input type="text" name="author"
+                            class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            placeholder="Ex: Joan Garcia">
+                    </div>
 
-                <div class="flex flex-col">
-                    <label for="category" class="text-sm font-medium mb-1">CatÃ©gorie</label>
-                    <select name="category"
-                        class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500">
-                        <option value="all">All</option>
-                        <option value="forest">Forest</option>
-                        <option value="beach">Beach</option>
-                        <option value="mountains">Mountains</option>
-                        <option value="road">Road</option>
-                    </select>
-                </div>
+                    <div class="flex flex-col">
+                        <label for="image" class="text-sm font-medium mb-1">Image URL</label>
+                        <input type="text" name="image"
+                            class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            placeholder="/assets/4.png">
+                    </div>
 
-                <button type="submit"
-                    class="bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition-colors">Ajouter</button>
-            </form>
+                    <div class="flex flex-col">
+                        <label for="category" class="text-sm font-medium mb-1">CatÃ©gorie</label>
+                        <select name="category"
+                            class="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <option value="all">All</option>
+                            <option value="forest">Forest</option>
+                            <option value="beach">Beach</option>
+                            <option value="mountains">Mountains</option>
+                            <option value="road">Road</option>
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-green-600 text-white font-semibold py-2 rounded-lg hover:bg-green-700 transition-colors">Ajouter</button>
+                </form>
+            </div>
         </div>
-        </div>
-        
+       
+
 
 
 
