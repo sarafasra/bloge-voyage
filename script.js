@@ -27,3 +27,8 @@ function afficherCards(tripsArray) {
 
     });
 }
+afficherCards(trips);
+
+document.getElementById("btnAdd").addEventListener("click", () => {
+    hid.classList.remove("hidden");
+});
