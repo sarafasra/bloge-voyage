@@ -2,9 +2,9 @@ let trips = [
     {
         id: 1,
         title: "Yellow River",
-        author: "Joan Garcia",
+        Destination: "Joan Garcia",
         image: "/tele.jpg",
-        category: "River"
+        Date: "River"
     }
 ];
 
@@ -30,7 +30,7 @@ function afficherCards(tripsArray) {
             <div class="bg-cover bg-center rounded-xl shadow-xl w-full h-full"
                  style="background-image:url('${trip.image}')"></div>
             <h6 class="font-semibold mt-1">${trip.title}</h6>
-            <p class="text-sm">by ${trip.author}</p>
+            <p class="text-sm">by ${trip.Destination}</p>
             
         </div>
         `;
@@ -49,9 +49,9 @@ document.getElementById("trip-form").addEventListener("submit", function (e) {
     const newTrip = {
         id: trips.length + 1,
         title: e.target.title.value,
-        author: e.target.author.value,
+        Destination: e.target.Destination.value,
         image: e.target.image.value,
-        category: e.target.category.value
+        Date: e.target.Date.value
     };
 
     trips.push(newTrip);
